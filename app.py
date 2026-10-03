@@ -416,6 +416,47 @@ if st.button("🧮 TÍNH LÃI", use_container_width=True):
 # ==============================
 # FOOTER
 # ==============================
+# =========================
+# BẢNG LÃI SUẤT NGÂN HÀNG
+# =========================
+
+st.divider()
+
+st.subheader("🏦 Bảng lãi suất tiết kiệm tham khảo")
+
+lai_suat_ngan_hang = pd.DataFrame({
+    "Ngân hàng": [
+        "Vietcombank",
+        "BIDV",
+        "VietinBank",
+        "Agribank",
+        "ACB",
+        "Techcombank",
+        "MB Bank",
+        "Sacombank"
+    ],
+    "Lãi suất (%/năm)": [
+        4.7,
+        4.7,
+        4.7,
+        4.7,
+        4.9,
+        5.0,
+        5.0,
+        5.1
+    ]
+})
+
+st.dataframe(
+    lai_suat_ngan_hang,
+    use_container_width=True,
+    hide_index=True
+)
+
+st.caption(
+    "※ Lãi suất chỉ mang tính tham khảo và có thể thay đổi tùy từng thời điểm, "
+    "kỳ hạn và hình thức gửi."
+)
 
 st.divider()
 
